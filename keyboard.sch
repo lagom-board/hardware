@@ -3,7 +3,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title "Keyboard"
 Date ""
 Rev ""
@@ -345,8 +345,6 @@ Wire Wire Line
 Wire Wire Line
 	8100 4700 8150 4700
 Wire Wire Line
-	7100 3650 6950 3650
-Wire Wire Line
 	7100 4700 7050 4700
 Wire Wire Line
 	7050 4700 7050 4750
@@ -362,17 +360,6 @@ F 3 "" H 7050 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8100 3100
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C47BF0D
-P 6950 3650
-F 0 "#PWR?" H 6950 3500 50  0001 C CNN
-F 1 "+3.3V" V 6950 4000 50  0000 R CNN
-F 2 "" H 6950 3650 50  0001 C CNN
-F 3 "" H 6950 3650 50  0001 C CNN
-	1    6950 3650
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5C47CC29
@@ -530,7 +517,7 @@ JOY_DOWN
 Text Label 8150 3000 0    50   ~ 0
 BTN_RIGHT
 Text HLabel 8150 3400 2    50   Output ~ 0
-INT
+~INT~
 Text HLabel 8150 3300 2    50   Input ~ 0
 SCL
 Text HLabel 8150 3200 2    50   BiDi ~ 0
@@ -651,4 +638,37 @@ Wire Wire Line
 	9050 3500 9100 3500
 Text Label 9100 3500 0    50   ~ 0
 ROW3
+Wire Wire Line
+	7050 3750 7050 3800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C522576
+P 7050 3750
+F 0 "#PWR?" H 7050 3600 50  0001 C CNN
+F 1 "+3.3V" H 7050 3900 50  0000 C CNN
+F 2 "" H 7050 3750 50  0001 C CNN
+F 3 "" H 7050 3750 50  0001 C CNN
+	1    7050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5C522580
+P 7050 3900
+F 0 "R?" H 6992 3854 50  0000 R CNN
+F 1 "10K" H 6992 3945 50  0000 R CNN
+F 2 "" H 7050 3900 50  0001 C CNN
+F 3 "~" H 7050 3900 50  0001 C CNN
+	1    7050 3900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7050 4050 7050 4000
+Wire Wire Line
+	7000 4050 7050 4050
+Connection ~ 7050 4050
+Wire Wire Line
+	7050 4050 7100 4050
+Text HLabel 7000 4050 0    50   Input ~ 0
+~RESET~
 $EndSCHEMATC
