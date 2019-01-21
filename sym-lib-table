@@ -3,4 +3,5 @@
   (lib (name Keyboard)(type Legacy)(uri ${KIPRJMOD}/library/Keyboard.lib)(options "")(descr ""))
   (lib (name MCU_Microchip_SAMD_Extra)(type Legacy)(uri ${KIPRJMOD}/library/MCU_Microchip_SAMD_Extra.lib)(options "")(descr ""))
   (lib (name Display_Graphic_Extra)(type Legacy)(uri ${KIPRJMOD}/library/Display_Graphic_Extra.lib)(options "")(descr ""))
+  (lib (name FPGA_Lattice_Extra)(type Legacy)(uri ${KIPRJMOD}/library/FPGA_Lattice_Extra.lib)(options "")(descr ""))
 )
